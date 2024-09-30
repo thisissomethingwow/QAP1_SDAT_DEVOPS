@@ -5,6 +5,9 @@ public class ATM {
     private double withdrawLimits;
     private double atmFees;
 
+    //for the fee it could depend on if the atm is a bank owned one or not
+
+
     public double getRemainingMoney() {
         return remainingMoney;
     }
