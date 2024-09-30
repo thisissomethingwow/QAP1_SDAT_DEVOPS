@@ -4,6 +4,7 @@ public class BankAccount {
     private double dailyWithdrawLimit;
     private double interestRate;
     private double money;
+    private int pinNumber;
 
     public double getDailyWithdrawLimit() {
         return dailyWithdrawLimit;
@@ -29,10 +30,19 @@ public class BankAccount {
         this.money = money;
     }
 
-    public BankAccount(double dailyWithdrawLimit, double interestRate, double money) {
+    public int getPinNumber() {
+        return pinNumber;
+    }
+
+    public void setPinNumber(int pinNumber) {
+        this.pinNumber = pinNumber;
+    }
+
+    public BankAccount(double dailyWithdrawLimit, double interestRate, double money, int pinNumber) {
         this.dailyWithdrawLimit = dailyWithdrawLimit;
         this.interestRate = interestRate;
         this.money = money;
+        this.pinNumber = pinNumber;
     }
 
     @Override
@@ -41,6 +51,7 @@ public class BankAccount {
                 "dailyWithdrawLimit=" + dailyWithdrawLimit +
                 ", interestRate=" + interestRate +
                 ", money=" + money +
+                ", pinNumber=" + pinNumber +
                 '}';
     }
 }
