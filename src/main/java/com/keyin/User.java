@@ -5,8 +5,7 @@ public class User {
     private String lName;
     private int age;
     private String birthdate;
-    private String address;
-    private BankAccount bk;
+    private final BankAccount bk;
 
     public String getfName() {
         return fName;
@@ -29,7 +28,10 @@ public class User {
     }
 
     public void setAge(int age) {
-        this.age = age;
+        if (isValidAge(age)){
+            this.age = age;
+        }
+
     }
 
     public String getBirthdate() {
@@ -40,20 +42,14 @@ public class User {
         this.birthdate = birthdate;
     }
 
-    public String getAddress() {
-        return address;
-    }
 
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public User(String fName, String lName, int age, String birthdate, String address,BankAccount bk) {
+    public User(String fName, String lName, int age, String birthdate,BankAccount bk) {
         this.fName = fName;
         this.lName = lName;
-        this.age = age;
+        if (isValidAge(age)){
+            this.age = age;
+        }
         this.birthdate = birthdate;
-        this.address = address;
         this.bk = bk;
     }
 
@@ -64,8 +60,21 @@ public class User {
                 ", lName='" + lName + '\'' +
                 ", age=" + age +
                 ", birthdate='" + birthdate + '\'' +
-                ", address='" + address + '\'' +
                 ", bk=" + bk +
                 '}';
     }
+
+    public boolean isValidAge(int age){
+        if (age<19) {
+            System.out.println("You are not old enough get older");
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+
+
+
+
 }
