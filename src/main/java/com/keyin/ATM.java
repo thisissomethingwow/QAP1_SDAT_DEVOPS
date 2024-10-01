@@ -5,9 +5,6 @@ public class ATM {
     private boolean bankOwnedATM;
     private double atmFees;
 
-    //for the fee it could depend on if the atm is a bank owned one or not
-
-
     public double getMoneyInATM() {
         return moneyInATM;
     }
