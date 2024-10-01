@@ -1,28 +1,21 @@
 package com.keyin;
 
 public class ATM {
-    private double remainingMoney;
-    private double withdrawLimits;
+    private double moneyInATM;
+    private boolean bankOwnedATM;
     private double atmFees;
 
     //for the fee it could depend on if the atm is a bank owned one or not
 
 
-    public double getRemainingMoney() {
-        return remainingMoney;
+    public double getMoneyInATM() {
+        return moneyInATM;
     }
 
-    public void setRemainingMoney(double remainingMoney) {
-        this.remainingMoney = remainingMoney;
+    public void setMoneyInATM(double moneyInATM) {
+        this.moneyInATM = moneyInATM;
     }
 
-    public double getWithdrawLimits() {
-        return withdrawLimits;
-    }
-
-    public void setWithdrawLimits(double withdrawLimits) {
-        this.withdrawLimits = withdrawLimits;
-    }
 
     public double getAtmFees() {
         return atmFees;
@@ -32,18 +25,27 @@ public class ATM {
         this.atmFees = atmFees;
     }
 
-    public ATM(double remainingMoney, double withdrawLimits, double atmFees) {
-        this.remainingMoney = remainingMoney;
-        this.withdrawLimits = withdrawLimits;
+    public boolean isBankOwnedATM() {
+        return bankOwnedATM;
+    }
+
+    public void setBankOwnedATM(boolean bankOwnedATM) {
+        this.bankOwnedATM = bankOwnedATM;
+    }
+
+    public ATM(double moneyInATM, boolean bankOwnedATM, double atmFees) {
+        this.moneyInATM = moneyInATM;
+        this.bankOwnedATM = bankOwnedATM;
         this.atmFees = atmFees;
     }
 
     @Override
     public String toString() {
         return "ATM{" +
-                "remainingMoney=" + remainingMoney +
-                ", withdrawLimits=" + withdrawLimits +
+                "moneyInATM=" + moneyInATM +
+                "$, bankOwnedATM=" + bankOwnedATM +
                 ", atmFees=" + atmFees +
                 '}';
     }
+
 }
