@@ -44,8 +44,9 @@ public class BankAccount {
                 '}';
     }
 
-    public void checkBalance(){
+    public double checkBalance(){
         System.out.println("Your Balance is: "+money+"$");
+        return money;
     }
 
     public void deposit(double depositAmount){
