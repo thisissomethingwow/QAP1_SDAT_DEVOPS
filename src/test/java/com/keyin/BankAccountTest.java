@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 class BankAccountTest {
   @Test
-    void testConstructor(){
+    void testBankAccountConstructor(){
       BankAccount bankAccount = new BankAccount(100,1000,1234);
       assertEquals(100, bankAccount.getDailyWithdrawLimit());
       assertEquals(1000.0,bankAccount.getMoney());
